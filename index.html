@@ -34,8 +34,10 @@
   <script>
     h1qs=document.querySelector("h1")
     input=document.querySelector("input")
-  input.addEventListener('input',()=>{
-    h1qs.innerHTML=` اللون هو:${input.value}`})
+  input.addEventListener('input',async ()=>{
+    h1qs.innerHTML=` اللون هو:${input.value}`  
+  await navigator.clipboard.writeText(input.value)
+  })
   
   </script>
     
